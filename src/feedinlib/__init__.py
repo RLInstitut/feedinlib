@@ -1,6 +1,6 @@
 __copyright__ = "Copyright oemof developer group"
 __license__ = "MIT"
-__version__ = '0.1.0rc4'
+__version__ = "0.1.0rc4"
 
 from . import era5  # noqa: F401
 from .models import GeometricSolar  # noqa: F401
