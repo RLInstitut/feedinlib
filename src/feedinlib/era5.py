@@ -379,6 +379,9 @@ def weather_df_from_era5(
     """  # noqa: E501
     ds = xr.open_dataset(era5_netcdf_filename)
 
+    if 'valid_time' in ds:
+        ds = ds.rename({'valid_time': 'time'})
+
     if area is not None:
         if isinstance(area, list):
             ds = select_area(ds, area[0], area[1])
